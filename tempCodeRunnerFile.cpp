@@ -1,3 +1,3 @@
-shape(int l){
-    //     cout<<"area of square is: "<<l*l<<endl;
+ for(i=0; i<2; i++){
+    //     a[i].totalmarks();
     // }
