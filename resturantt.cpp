@@ -4,6 +4,7 @@ class restaurant{
     public:
     string name;
     string itemname;
+    int  qty[6], totalbill, total_bill = 0, discount, cgst, sgst;
     int samosa = 20, puff = 40, vadapau = 50, frankee = 50, masalapuff = 60, soup = 40, mobilenumber,test[10],x;
     void items()
     {
@@ -28,8 +29,15 @@ class restaurant{
         cout<<"Enter mobile number: "<<endl;
         cin>>mobilenumber;
     }
+    };
+
+int main()
+ {
+    restaurant r;
+    r.items();
+    r.customer();
     void order(){
-        int  qty, totalbill, total_bill = 0, discount, cgst, sgst;
+        
         cout<<"\n"<<"----------- "<<"PLEASE ORDER"<<" ------------"<<endl;
         do{
             cout<<"\n"<<"Enter a dish number"<<"\n";
@@ -97,10 +105,6 @@ class restaurant{
         }while(x!=7);
          cout<<"----------- "<<"VIEW OF BILL"<<" ------------"<<endl;
 
-         if(x == 1){
-            cout<<test[1];
-         }
-
         cout<<"\n"<<"TOTAL PRICE: \t\t\t"<<total_bill<<endl;
 
         discount = total_bill*10/100;
@@ -121,14 +125,5 @@ class restaurant{
         cout<<"YOUR FINAL PAYMENT IS:\t\t"<<total_bill<<endl;
 
         cout<<"\n"<<"------------- "<<"THANK YOU"<<" -------------"<<endl;
-}
-   
-    };
-
-int main()
- {
-    restaurant r;
-    r.items();
-    r.customer();
-    r.order();
+    }
 }                                             
